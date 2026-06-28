@@ -46,9 +46,7 @@ The project is available in both:
 | LLM           | OpenRouter       |
 | API           | Google Books API |
 | Web Framework | Streamlit        |
-| HTTP Client   | Requests         |
-| Environment   | python-dotenv    |
-| Storage       | JSON             |
+
 
 ---
 
@@ -89,12 +87,6 @@ BOOKS_AGENT/
 ├── memory.py               # Memory management
 ├── memory.json             # Conversation history
 ├── .env                    # API keys
-├── requirements.txt
-├── images/
-│   ├── home-page.png
-│   ├── search-results.png
-│   ├── cli-search.png
-│   └── non-book-query.png
 └── README.md
 ```
 
