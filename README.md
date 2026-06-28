@@ -228,6 +228,7 @@ The modern Streamlit interface provides a clean and intuitive experience for sea
 ## Search Results
 
 Example of searching for **Ikigai** books using natural language.
+
 <img width="1913" height="1012" alt="Screenshot 2026-06-28 130623" src="https://github.com/user-attachments/assets/794f9d35-0f3f-48a3-a2c3-f9a5ed49e8a2" />
 
 
@@ -241,6 +242,7 @@ Terminal-based interaction with the Book Search Agent.
 ## Handling Non-Book Queries
 
 The assistant gracefully responds to questions outside its supported domain.
+
 <img width="1006" height="162" alt="Screenshot 2026-06-28 130422" src="https://github.com/user-attachments/assets/8f228fb8-47be-46cf-ac97-ff984df54327" />
 
 
@@ -264,9 +266,9 @@ This project is licensed under the **MIT License**.
 **Adithyaa Venkatesh**
 
 GitHub: https://github.com/adithyaavenkatesh15
-Linkendin:
 
-LinkedIn: *(Add your LinkedIn profile here.)*
+
+LinkedIn: https://www.linkedin.com/in/adithyaa-venkatesh-457aa42b4
 
 ---
 
