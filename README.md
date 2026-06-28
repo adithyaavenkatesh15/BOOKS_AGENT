@@ -1,99 +1,318 @@
-# BOOKS_AGENT
+# 📚 BOOKS_AGENT
 
-BOOKS_AGENT is an AI-powered book search assistant that helps users discover books using natural language queries. It combines an LLM-powered agent with the Google Books API to provide relevant book results and present them in a clean, user-friendly format.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?logo=streamlit)
+![OpenRouter](https://img.shields.io/badge/OpenRouter-LLM-success)
+![Google Books API](https://img.shields.io/badge/API-Google%20Books-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## Overview
+An AI-powered Book Search Assistant built with **Python**, **OpenRouter LLM**, **Google Books API**, and **Streamlit**. The application enables users to search for books using natural language, retrieves real-time book information from the Google Books API, and presents the results through an intuitive web interface or command-line application.
 
-This project contains two main ways to interact with the agent:
+---
 
-- A terminal-based chatbot experience through [main.py](main.py)
-- A modern web interface through [streamlit_app.py](streamlit_app.py)
+# Overview
 
-The assistant is designed to understand requests such as book titles, authors, topics, genres, or general book recommendations and then fetch matching results from the Google Books API.
+BOOKS_AGENT combines the reasoning capabilities of a Large Language Model with the Google Books API through **Function Calling (Tool Calling)**.
 
-## Features
+The assistant understands user requests such as book titles, authors, genres, topics, or recommendations, automatically invokes the appropriate search tool, and formats the results into a clean and readable response.
 
-- Search books by title, author, topic, keyword, or genre
-- Use an AI assistant to interpret user requests
-- Format results clearly with title, author, publisher, and publication date
-- Store recent searches and conversation memory locally
-- Provide a polished Streamlit-based user interface
+The project is available in both:
 
-## Project Structure
+* **Command-Line Interface (CLI)**
+* **Interactive Streamlit Web Application**
 
-- [main.py](main.py) - Contains the core agent loop, tool calling logic, and API integration
-- [tools.py](tools.py) - Implements the Google Books search tool
-- [prompt.py](prompt.py) - Defines the system prompt for the assistant
-- [memory.py](memory.py) - Handles loading and saving local memory
-- [streamlit_app.py](streamlit_app.py) - Provides the web app UI
-- [memory.json](memory.json) - Stores the agent memory locally
+---
 
-## Prerequisites
+# Features
 
-Make sure you have Python installed on your machine.
+* AI-powered conversational book search
+* Search books by title, author, topic, keyword, or genre
+* Google Books API integration
+* OpenRouter LLM with Function Calling
+* Persistent conversation memory
+* Interactive Streamlit web application
+* Command-line interface
+* Search history support
+* Dark and Light UI themes
+* Clean, formatted book results
 
-Then install the required packages:
+---
 
-```bash
-pip install requests python-dotenv streamlit
+# Technology Stack
+
+| Category      | Technology       |
+| ------------- | ---------------- |
+| Language      | Python           |
+| LLM           | OpenRouter       |
+| API           | Google Books API |
+| Web Framework | Streamlit        |
+| HTTP Client   | Requests         |
+| Environment   | python-dotenv    |
+| Storage       | JSON             |
+
+---
+
+# System Architecture
+
+```text
+                    User
+                      │
+                      ▼
+             Streamlit UI / CLI
+                      │
+                      ▼
+             Book Search Agent
+                      │
+         ┌────────────┴────────────┐
+         ▼                         ▼
+   OpenRouter LLM          Google Books API
+         │                         │
+         └────────────┬────────────┘
+                      ▼
+             Formatted Response
+                      │
+                      ▼
+                    User
 ```
 
-## Environment Setup
+---
 
-Create a `.env` file inside the BOOKS_AGENT folder and add your API keys:
+# Project Structure
+
+```text
+BOOKS_AGENT/
+│
+├── main.py                  # CLI application
+├── streamlit_app.py         # Streamlit UI
+├── tools.py                # Google Books API tool
+├── prompt.py               # System prompt
+├── memory.py               # Memory management
+├── memory.json             # Conversation history
+├── .env                    # API keys
+├── requirements.txt
+├── images/
+│   ├── home-page.png
+│   ├── search-results.png
+│   ├── cli-search.png
+│   └── non-book-query.png
+└── README.md
+```
+
+---
+
+# Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/adithyaavenkatesh15/BOOKS_AGENT.git
+```
+
+Navigate into the project directory
+
+```bash
+cd BOOKS_AGENT
+```
+
+Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate the environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Environment Setup
+
+Create a `.env` file inside the project root.
 
 ```env
 OPENROUTER_API_KEY=your_openrouter_api_key
 GOOGLE_BOOKS_API_KEY=your_google_books_api_key
 ```
 
-### Where to get the keys
+### Obtain API Keys
 
-- OpenRouter API key: https://openrouter.ai/
-- Google Books API key: https://developers.google.com/books
+**OpenRouter**
 
-## Running the Agent
+https://openrouter.ai/
 
-### 1. Run the terminal version
+**Google Books API**
 
-From the BOOKS_AGENT folder, run:
+https://developers.google.com/books
+
+---
+
+# Running the Application
+
+## Command-Line Interface
 
 ```bash
 python main.py
 ```
 
-You can then type prompts such as:
+Example Queries
 
-- Search Atomic Habits
-- Find Harry Potter
-- Books by James Clear
-- Best Python books
-- Top machine learning books
+```
+Search Atomic Habits
 
-### 2. Run the Streamlit web app
+Find Harry Potter
 
-From the BOOKS_AGENT folder, run:
+Books by James Clear
+
+Best Python books
+
+Top Machine Learning books
+
+Find Ikigai books
+```
+
+---
+
+## Streamlit Web Application
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-This will launch the web interface in your browser.
+The application will open in your browser at:
 
-## How It Works
+```
+http://localhost:8501
+```
 
-1. The user enters a query.
-2. The LLM interprets the request.
-3. The agent calls the book search tool.
-4. The Google Books API returns book results.
-5. The AI formats the output in a friendly response.
+---
 
-## Memory
+# How It Works
 
-The app stores conversation memory locally in [memory.json](memory.json). You can clear or delete this file if you want to reset the assistant memory.
+1. The user enters a natural language query.
+2. The OpenRouter LLM interprets the request.
+3. The model invokes the Book Search Tool.
+4. The tool queries the Google Books API.
+5. The retrieved book information is returned to the LLM.
+6. The LLM formats the results into a readable response.
+7. Conversation history is stored locally for future interactions.
 
-## Notes
+---
 
-- The assistant is focused on book-related queries.
-- For unrelated questions, it will politely respond that it can only help with books.
-- Make sure your API keys are valid and available in the `.env` file before running the app.
+# Screenshots
+
+## Home Page
+
+The modern Streamlit interface provides a clean and intuitive experience for searching books.
+
+```text
+images/home-page.png
+```
+
+![Home Page](images/home-page.png)
+
+---
+
+## Search Results
+
+Example of searching for **Ikigai** books using natural language.
+
+```text
+images/search-results.png
+```
+
+![Search Results](images/search-results.png)
+
+---
+
+## Command-Line Interface
+
+Terminal-based interaction with the Book Search Agent.
+
+```text
+images/cli-search.png
+```
+
+![CLI Version](images/cli-search.png)
+
+---
+
+## Handling Non-Book Queries
+
+The assistant gracefully responds to questions outside its supported domain.
+
+```text
+images/non-book-query.png
+```
+
+![Non Book Query](images/non-book-query.png)
+
+---
+
+# Memory
+
+Conversation history is stored locally in **memory.json**.
+
+You can delete or clear this file at any time to reset the assistant's memory.
+
+---
+
+# Future Enhancements
+
+* Personalized recommendations
+* Reading list management
+* Favorite books
+* Book summaries
+* Voice-based interaction
+* Multi-language support
+* Goodreads integration
+* RAG-powered semantic search
+* User authentication
+
+---
+
+# License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# Author
+
+**Adithya A. Venkatesh**
+
+GitHub: https://github.com/adithyaavenkatesh15
+
+LinkedIn: *(Add your LinkedIn profile here.)*
+
+---
+
+# Acknowledgements
+
+* OpenRouter
+* Google Books API
+* Streamlit
+* Python Community
+
+---
+
+# Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub. Your support helps others discover the project and encourages future development.
+
