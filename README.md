@@ -221,49 +221,28 @@ http://localhost:8501
 
 The modern Streamlit interface provides a clean and intuitive experience for searching books.
 
-```text
-images/home-page.png
-```
+<img width="1913" height="1018" alt="Screenshot 2026-06-28 130540" src="https://github.com/user-attachments/assets/18125368-cfc1-4a3c-9f4d-551249ffb5cb" />
 
-![Home Page](images/home-page.png)
 
----
 
 ## Search Results
 
 Example of searching for **Ikigai** books using natural language.
+<img width="1913" height="1012" alt="Screenshot 2026-06-28 130623" src="https://github.com/user-attachments/assets/794f9d35-0f3f-48a3-a2c3-f9a5ed49e8a2" />
 
-```text
-images/search-results.png
-```
-
-![Search Results](images/search-results.png)
-
----
 
 ## Command-Line Interface
 
 Terminal-based interaction with the Book Search Agent.
 
-```text
-images/cli-search.png
-```
+<img width="1165" height="720" alt="Screenshot 2026-06-28 130341" src="https://github.com/user-attachments/assets/36c78055-2c0a-446f-9954-db0fae140eb4" />
 
-![CLI Version](images/cli-search.png)
-
----
 
 ## Handling Non-Book Queries
 
 The assistant gracefully responds to questions outside its supported domain.
+<img width="1006" height="162" alt="Screenshot 2026-06-28 130422" src="https://github.com/user-attachments/assets/8f228fb8-47be-46cf-ac97-ff984df54327" />
 
-```text
-images/non-book-query.png
-```
-
-![Non Book Query](images/non-book-query.png)
-
----
 
 # Memory
 
@@ -273,19 +252,6 @@ You can delete or clear this file at any time to reset the assistant's memory.
 
 ---
 
-# Future Enhancements
-
-* Personalized recommendations
-* Reading list management
-* Favorite books
-* Book summaries
-* Voice-based interaction
-* Multi-language support
-* Goodreads integration
-* RAG-powered semantic search
-* User authentication
-
----
 
 # License
 
@@ -295,9 +261,10 @@ This project is licensed under the **MIT License**.
 
 # Author
 
-**Adithya A. Venkatesh**
+**Adithyaa Venkatesh**
 
 GitHub: https://github.com/adithyaavenkatesh15
+Linkendin:
 
 LinkedIn: *(Add your LinkedIn profile here.)*
 
